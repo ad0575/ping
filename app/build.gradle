@@ -25,6 +25,16 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name == "release") {
+                outputFileName = "ag.ping-${variant.versionName}-release.apk"
+            } else {
+                outputFileName = "ag.ping-${variant.versionName}-debug.apk"
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
