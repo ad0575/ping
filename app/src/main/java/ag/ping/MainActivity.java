@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.text.SpannableString;
 import android.text.method.ScrollingMovementMethod;
-import android.text.style.RelativeSizeSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,19 +26,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.main);
 
-        Button btn = findViewById(R.id.host_btn);
-        String app = getString(R.string.app_name),
-            help = getString(R.string.app_help);
-        SpannableString textSpan = new SpannableString(
-                app+"\n"+help);
+        Button btn = findViewById(R.id.main_host_btn);
 
         i18n = new MainI18N(getResources());
-        output = findViewById(R.id.output);
+        output = findViewById(R.id.main_output);
         handler = new Handler(Looper.getMainLooper());
         executor = Executors.newSingleThreadExecutor();
 
         btn.setOnClickListener((View view) -> {
-            EditText host = findViewById(R.id.host);
+            EditText host = findViewById(R.id.main_host);
             String target = host.getText().toString();
 
             if (target.isEmpty()) {
@@ -50,12 +44,6 @@ public class MainActivity extends Activity {
                 doPing(target);
             }
         });
-        textSpan.setSpan(
-                new RelativeSizeSpan(2.0f), // Up text 2x
-                0, app.length(),
-                SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE
-        );
-        output.append(textSpan);
         output.setMovementMethod(new ScrollingMovementMethod());
     }
 

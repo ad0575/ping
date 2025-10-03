@@ -8,7 +8,7 @@ android {
 
     signingConfigs {
         general {
-            storeFile file('D:\\Dev\\Ag\\Ping\\sign-upload.jks')
+            storeFile file('D:\\Dev\\Ag\\ping\\sign-upload.jks')
             storePassword '#31575'
             keyAlias 'upload'
             keyPassword '#31575'

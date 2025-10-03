@@ -8,34 +8,46 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/output"
+        android:id="@+id/main_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/host_label"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_margin="5sp"
-        android:maxLines="200"
-        android:scrollbars="vertical"/>
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="@string/app_name"/>
 
     <TextView
-        android:id="@+id/host_label"
+        android:id="@+id/main_output"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_title"
+        android:layout_above="@id/main_host_label"
+        android:layout_margin="5sp"
+        android:maxLines="200"
+        android:scrollbars="vertical"
+        android:text="@string/app_help"/>
+
+    <TextView
+        android:id="@+id/main_host_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/host"
+        android:layout_above="@id/main_host"
         android:layout_margin="5sp"
         android:text="@string/host_label"
-        android:labelFor="@id/host"/>
+        android:labelFor="@id/main_host"/>
 
     <EditText
-        android:id="@+id/host"
+        android:id="@+id/main_host"
         android:layout_width="match_parent"
         android:layout_height="48sp"
+        android:layout_toStartOf="@id/main_host_btn"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@id/host_btn"
         android:inputType="text"
         android:autofillHints="false"/>
 
     <Button
-        android:id="@+id/host_btn"
+        android:id="@+id/main_host_btn"
         android:layout_width="48sp"
         android:layout_height="48sp"
         android:layout_margin="5sp"
