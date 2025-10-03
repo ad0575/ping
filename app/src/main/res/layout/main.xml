@@ -14,8 +14,7 @@
         android:layout_above="@id/host_label"
         android:layout_margin="5sp"
         android:maxLines="200"
-        android:scrollbars="vertical"
-        android:text="@string/app_help"/>
+        android:scrollbars="vertical"/>
 
     <TextView
         android:id="@+id/host_label"

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Ping</string>
-    <string name="app_help">Informe o host no campo abaixo e pressione o botão > para iniciar o PING.</string>
+    <string name="app_name">AG Ping</string>
+    <string name="app_help">Informe o host de destino no campo abaixo e pressione o botão \u25B6 para iniciar o PING.</string>
     <string name="host_label">IP | DNS</string>
     <string name="host_btn">\u25B6</string> <!-- Stop \u23F9 -->
     <string name="host_not_informed">É necessario informar o Endereço IP ou DNS.</string>
