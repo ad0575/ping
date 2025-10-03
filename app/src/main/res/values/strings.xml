@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ping</string>
+    <string name="app_help">Informe o host no campo abaixo e pressione o botão > para iniciar o PING.</string>
+    <string name="host_label">IP | DNS</string>
+    <string name="host_btn">\u25B6</string> <!-- Stop \u23F9 -->
+    <string name="host_not_informed">É necessario informar o Endereço IP ou DNS.</string>
+    <string name="start_ping">Iniciando ping para {0} …</string>
+    <string name="call_ping_error">Erro ao chamar o ping:</string>
+    <string name="ping_fail">Erro ao executar o ping, #{0}.</string>
+</resources>
